@@ -22,11 +22,11 @@ Many DSA problems follow specific patterns. Once you master these patterns, you'
 - ✅ Union-Find  
 - ✅ Bit Manipulation  
 
+## 📂 Folder Structure
+
 Each folder contains:
 - Explanation of the pattern
 - Example problems
 - Java code
 - Time & Space Complexity
-
-## 📂 Folder Structure
 
