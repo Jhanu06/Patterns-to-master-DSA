@@ -1,0 +1,61 @@
+### 📘 3. Fast & Slow Pointers (Tortoise and Hare)
+
+#### 🧠 Concept
+
+The Fast & Slow Pointers pattern involves two pointers moving through a sequence at different speeds—**one fast and one slow**.  
+This technique is mainly used to **detect cycles**, **find middle elements**, or **detect duplicate elements** in sequences or linked structures.
+
+---
+
+#### 📌 When to Use
+
+* When working with **linked lists** or **sequences**
+* To **detect cycles or loops**
+* To **find the start of a cycle**
+* To **find the middle node** in a single pass
+* For problems involving **repetition or looping behavior**
+
+---
+
+#### ⚙️ How to Use
+
+1. **Initialize** two pointers:
+   * `slow` moves one step at a time
+   * `fast` moves two steps at a time
+
+2. Traverse through the list or sequence:
+   * If there's a **cycle**, `fast` will eventually catch up with `slow`
+   * If `fast` reaches the end (`null` or out of bounds), then there is **no cycle**
+
+3. For problems like **finding the duplicate number**, reset one pointer and move both one step at a time to find the cycle's start
+
+---
+
+#### 💻 Example Problem
+
+**Problem:**  
+Detect if a linked list contains a cycle.
+
+**Explanation:**  
+Use two pointers:
+* `slow = head`
+* `fast = head`
+
+Move:
+* `slow = slow.next`
+* `fast = fast.next.next`
+
+If `slow == fast` at any point, there's a cycle.  
+If `fast == null` or `fast.next == null`, the list ends → no cycle.
+
+---
+
+#### 🔗 LeetCode Practice
+
+* [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+* [202. Happy Number](https://leetcode.com/problems/happy-number/)
+* [287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
+* [876. Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)
+* [142. Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)
+
+---
