@@ -1,0 +1,52 @@
+### 📘 4. LinkedList In-place Reversal
+
+#### 🧠 Concept
+
+The In-place Reversal of a LinkedList pattern involves reversing parts (or the entire) linked list by **rearranging pointers**, without using extra space like arrays or stacks.  
+This is done **in O(1) space** and **O(n) time**, making it highly efficient for memory-constrained environments.
+
+---
+
+#### 📌 When to Use
+
+* When you need to **reverse all or part** of a linked list
+* To solve problems involving **sublist reversal**, **k-group reversal**, or **swapping pairs**
+* When you want to modify the list **in-place** with no extra memory
+
+---
+
+#### ⚙️ How to Use
+
+1. **Traverse** the list to reach the position `m` (start of sublist).
+2. Keep track of:
+   * The node before reversal starts (`prev`)
+   * The start of the sublist (`start`)
+3. **Iteratively reverse** the sublist from position `m` to `n` by adjusting `.next` pointers.
+4. **Reconnect** the reversed part with the rest of the list.
+
+---
+
+#### 💻 Example Problem
+
+**Problem:**  
+Reverse the nodes of a linked list from position `m = 2` to `n = 4`.
+
+**Input:**  
+`head = [1, 2, 3, 4, 5]`, `m = 2`, `n = 4`
+
+**Output:**  
+`[1, 4, 3, 2, 5]`
+
+**Explanation:**  
+The sublist `[2, 3, 4]` is reversed in-place to `[4, 3, 2]`, and the rest of the list remains unchanged.
+
+---
+
+#### 🔗 LeetCode Practice
+
+* [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
+* [92. Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)
+* [24. Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)
+* [25. Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)
+
+---
