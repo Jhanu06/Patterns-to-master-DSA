@@ -1,0 +1,54 @@
+### 📘 6. Monotonic Stack
+
+#### 🧠 Concept
+
+The Monotonic Stack pattern uses a stack to maintain a **monotonically increasing or decreasing order**.  
+It is commonly used to solve problems like **Next Greater Element**, **Previous Smaller Element**, and other **range-based comparisons** efficiently.
+
+---
+
+#### 📌 When to Use
+
+* When you need to find **next/previous greater or smaller elements**
+* When solving **temperature**, **stock span**, or **histogram**-based problems
+* When a **brute-force solution** leads to O(n²) complexity and you want to optimize it to O(n)
+
+---
+
+#### ⚙️ How to Use
+
+1. **Initialize a stack** to keep track of indices (or elements).
+2. Iterate through the array.
+3. For each element:
+   - While the stack is not empty **and current element > top of stack**, pop from the stack.
+   - Set result for the popped index to the current element (or index).
+4. Push the current index (or element) onto the stack.
+5. After iteration, set result for remaining indices to `-1` if no greater element was found.
+
+---
+
+#### 💻 Example Problem
+
+**Problem:**  
+Find the next greater element for each element in an array.
+
+**Input:**  
+`nums = [2, 1, 2, 4, 3]`
+
+**Output:**  
+`[4, 2, 4, -1, -1]`
+
+**Explanation:**  
+Use a stack to keep track of indices of elements waiting for a greater number.  
+When a greater number is found, update the result for those indices.
+
+---
+
+#### 🔗 LeetCode Practice
+
+* [496. Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/)
+* [739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
+* [84. Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
+* [503. Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/)
+
+---
