@@ -8,19 +8,21 @@ Many DSA problems follow specific patterns. Once you master these patterns, you'
 
 ## 🔥 What you'll find here
 
-- ✅ Sliding Window  
+- ✅ Prefix Sum 
 - ✅ Two Pointers  
-- ✅ Fast & Slow Pointers  
-- ✅ Prefix Sum  
-- ✅ Kadane's Algorithm  
-- ✅ In-place Reversal of Linked List  
-- ✅ BFS / DFS  
-- ✅ Backtracking  
-- ✅ Dynamic Programming  
-- ✅ Greedy Patterns  
+- ✅ Sliding Window   
+- ✅ Fast & Slow Pointers 
+- ✅ LinkedList In-place Reversal   
+- ✅ Monotonic Stack  
 - ✅ Top-K Elements  
-- ✅ Union-Find  
-- ✅ Bit Manipulation  
+- ✅ Overlapping Intervals
+- ✅ Kadane's Algorithm
+- ✅ BFS / DFS
+- ✅ Union-Find 
+- ✅ Greedy Patterns  
+- ✅ Backtracking  
+- ✅ Dynamic Programming 
+- ✅ Bit Manipulation 
 
 ## 📂 Folder Structure
 
