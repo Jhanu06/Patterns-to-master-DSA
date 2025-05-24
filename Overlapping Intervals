@@ -1,0 +1,52 @@
+### 📘 9. Overlapping Intervals
+
+#### 🧠 Concept
+
+The **Overlapping Intervals** pattern is used when working with **intervals that may overlap**, and you need to **merge, insert, or eliminate conflicts**.
+
+Two intervals `[a, b]` and `[c, d]` **overlap** if `b >= c`.
+
+---
+
+#### 📌 When to Use
+
+* When you're dealing with **interval scheduling**
+* When you need to **merge, insert, or remove** overlapping time ranges
+* Calendar, meeting times, range processing
+
+---
+
+#### ⚙️ How to Use
+
+1. **Sort the intervals** by their **start time**.
+2. Initialize an empty list `merged` to store the final intervals.
+3. Iterate through the sorted intervals:
+   - If the current interval overlaps with the **last** interval in `merged`, merge them by updating the end time.
+   - If it doesn’t overlap, **append** the current interval to `merged`.
+
+---
+
+#### 💻 Example Problem
+
+**Problem:**  
+Merge all overlapping intervals.
+
+**Input:**  
+`intervals = [[1, 3], [2, 6], [8, 10], [15, 18]]`
+
+**Output:**  
+`[[1, 6], [8, 10], [15, 18]]`
+
+**Explanation:**  
+- `[1, 3]` overlaps with `[2, 6]` → merge to `[1, 6]`
+- `[8, 10]` and `[15, 18]` don't overlap with any others
+
+---
+
+#### 🔗 LeetCode Practice
+
+* [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+* [57. Insert Interval](https://leetcode.com/problems/insert-interval/)
+* [435. Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
+
+---
