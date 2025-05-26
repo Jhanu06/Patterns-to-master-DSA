@@ -1,0 +1,48 @@
+### 📘 10. Depth-First Search (DFS)
+
+#### 🧠 Concept
+
+**Depth-First Search (DFS)** is a traversal algorithm used in **trees and graphs**. It explores a node and then goes **as deep as possible** down one branch before **backtracking**. It can be implemented **recursively** or using a **stack**.
+
+---
+
+#### 📌 When to Use
+
+* When you need to **explore all paths** or **connected components**
+* When solving problems involving **tree traversal**, **graph traversal**, or **backtracking**
+* Useful for detecting **cycles** and solving **maze or path-finding problems**
+
+---
+
+#### ⚙️ How to Use
+
+1. Start from a node (root in case of tree).
+2. Mark the node as visited.
+3. Recursively (or via stack) visit all adjacent/unvisited children.
+4. Backtrack when no unvisited neighbors are left.
+
+---
+
+#### 💻 Example Problem
+
+**Problem:**  
+Find all paths from the root to the leaves in a binary tree.
+
+**Input:**  
+`root = [1, 2, 3, null, 5]`
+
+**Output:**  
+`["1->2->5", "1->3"]`
+
+**Explanation:**  
+Start from the root node and go deep into each branch until a leaf node is found. Record the path and backtrack to explore other branches.
+
+---
+
+#### 🔗 LeetCode Practice
+
+* [133. Clone Graph](https://leetcode.com/problems/clone-graph/)
+* [113. Path Sum II](https://leetcode.com/problems/path-sum-ii/)
+* [210. Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
+
+---
