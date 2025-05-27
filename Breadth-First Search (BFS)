@@ -1,0 +1,49 @@
+### 📘 11. Breadth-First Search (BFS)
+
+#### 🧠 Concept
+
+**Breadth-First Search (BFS)** is a traversal algorithm that explores **nodes level by level** in a **tree or graph**. It starts at the root (or any arbitrary node in a graph) and explores all its neighbors before moving to the next level.
+
+---
+
+#### 📌 When to Use
+
+* When you need to **find the shortest path** in an **unweighted graph**
+* When performing **level-order traversal** in trees
+* When solving problems that involve **exploration layer by layer**
+
+---
+
+#### ⚙️ How to Use
+
+1. Initialize a **queue** and add the starting node.
+2. While the queue is not empty:
+   - Remove the node from the front of the queue.
+   - Process the node.
+   - Add all unvisited neighbors (or children) to the queue.
+
+---
+
+#### 💻 Example Problem
+
+**Problem:**  
+Perform level-order traversal of a binary tree.
+
+**Input:**  
+`root = [3, 9, 20, null, null, 15, 7]`
+
+**Output:**  
+`[[3], [9, 20], [15, 7]]`
+
+**Explanation:**  
+Start from the root and use a queue to traverse each level of the tree. Add child nodes to the queue as you go, processing one level at a time.
+
+---
+
+#### 🔗 LeetCode Practice
+
+* [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+* [994. Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)
+* [127. Word Ladder](https://leetcode.com/problems/word-ladder/)
+
+---
