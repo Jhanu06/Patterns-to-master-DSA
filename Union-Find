@@ -1,0 +1,55 @@
+### 📘 12. Union-Find (Disjoint Set Union - DSU)
+
+#### 🧠 Concept
+
+The **Union-Find** or **Disjoint Set Union (DSU)** algorithm is a data structure that keeps track of elements partitioned into disjoint (non-overlapping) sets. It supports two main operations efficiently:
+
+- **Find**: Determine which set a particular element belongs to.
+- **Union**: Merge two sets together.
+
+With optimizations like **path compression** and **union by rank**, both operations can be nearly constant time, O(α(n)).
+
+---
+
+#### 📌 When to Use
+
+* When checking whether **two elements belong to the same group**
+* When detecting **cycles in a graph**
+* When solving **connected components** problems
+* When applying **Kruskal’s algorithm** for Minimum Spanning Tree (MST)
+
+---
+
+#### ⚙️ How to Use
+
+1. **Initialize** each node as its own parent (`parent[i] = i`)
+2. **Find function**: Recursively find the parent of a node with path compression.
+3. **Union function**: Combine two sets by linking one root to the other (optionally by rank).
+
+---
+
+#### 💻 Example Problem
+
+**Problem:**  
+You are given `n` nodes labeled from `0` to `n-1` and a list of undirected edges. Check if the graph forms a valid tree.
+
+**Input:**  
+`n = 5`, `edges = [[0,1],[0,2],[0,3],[1,4]]`
+
+**Output:**  
+`true` (no cycle, all nodes connected)
+
+**Explanation:**  
+Use Union-Find to detect cycles and ensure all nodes are connected.
+
+---
+
+#### 🔗 LeetCode Practice
+
+* [547. Number of Provinces](https://leetcode.com/problems/number-of-provinces/)
+* [684. Redundant Connection](https://leetcode.com/problems/redundant-connection/)
+* [1319. Number of Operations to Make Network Connected](https://leetcode.com/problems/number-of-operations-to-make-network-connected/)
+* [959. Regions Cut By Slashes](https://leetcode.com/problems/regions-cut-by-slashes/)
+* [399. Evaluate Division (with Union-Find + Weights)](https://leetcode.com/problems/evaluate-division/)
+
+---
