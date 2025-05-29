@@ -1,0 +1,54 @@
+### 📘 13. Greedy Algorithm
+
+#### 🧠 Concept
+
+A **Greedy Algorithm** builds up a solution step-by-step, always choosing the option that looks best at each moment.  
+It makes **locally optimal choices** with the hope that this leads to a **globally optimal solution**.
+
+Greedy solutions often have simpler logic and better performance but don’t always work unless the problem guarantees optimality under greedy choices.
+
+---
+
+#### 📌 When to Use
+
+* When the problem asks for the **maximum** or **minimum** (e.g., max profit, min cost)
+* When a **sorted structure** helps in decision making
+* When **choices are irreversible** and you want to make the best decision at each step
+* Problems that say "as much as possible", "largest/smallest", "minimum steps", etc.
+
+---
+
+#### ⚙️ How to Use
+
+1. Sort or organize data in a way that the greedy choice is obvious.
+2. At each step, **choose the best immediate option** (locally optimal).
+3. Update your structure or move forward, discarding choices that don’t align with the goal.
+4. Check if this greedy strategy leads to the **optimal result** (sometimes needs proof or counterexample check).
+
+---
+
+#### 💻 Example Problem
+
+**Problem:**  
+You're given a list of meetings with start and end times. Return the **minimum number of meeting rooms** required.
+
+**Input:**  
+`meetings = [[0, 30], [5, 10], [15, 20]]`
+
+**Output:**  
+`2`
+
+**Explanation:**  
+Sort the meetings by start time. Use a min-heap to track end times and greedily assign rooms based on current availability.
+
+---
+
+#### 🔗 LeetCode Practice
+
+* [122. Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)
+* [452. Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)
+* [435. Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
+* [1029. Two City Scheduling](https://leetcode.com/problems/two-city-scheduling/)
+* [605. Can Place Flowers](https://leetcode.com/problems/can-place-flowers/)
+
+---
