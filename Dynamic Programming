@@ -1,0 +1,67 @@
+### 📘 15. Dynamic Programming (DP)
+
+#### 🧠 Concept
+
+**Dynamic Programming** is an optimization technique used to solve complex problems by breaking them down into simpler **overlapping subproblems** and storing the results of subproblems to avoid redundant computation.
+
+It typically involves **recursion + memoization** (top-down) or **tabulation** (bottom-up).
+
+---
+
+#### 📌 When to Use
+
+Use DP when:
+- The problem has **optimal substructure** (solution can be formed from subproblems)
+- There are **overlapping subproblems** (same subproblem is solved multiple times)
+- You want to **optimize time** from exponential to polynomial
+
+Common signs:
+- “Find the number of ways…”
+- “Maximum/minimum…”
+- “Can you form…”
+- Recursive brute force is too slow
+
+---
+
+#### ⚙️ How to Use
+
+1. **Define state**: What does `dp[i]` mean?
+2. **Choose decisions**: What choices can be made at index `i`?
+3. **Recurrence Relation**: How is `dp[i]` built from smaller subproblems?
+4. **Base case(s)**: Define the smallest valid subproblem.
+5. Use **Memoization (top-down)** or **Tabulation (bottom-up)** for implementation.
+
+---
+
+#### 💻 Example Problem
+
+**Problem:**  
+Climb a staircase with `n` steps, where you can climb 1 or 2 steps at a time. Find the number of distinct ways.
+
+**Input:**  
+`n = 4`
+
+**Output:**  
+`5`
+
+**Explanation:**  
+You can reach the 4th step in the following ways:  
+`1+1+1+1`, `1+1+2`, `1+2+1`, `2+1+1`, `2+2`
+
+State: `dp[i]` = number of ways to reach step `i`  
+Recurrence: `dp[i] = dp[i-1] + dp[i-2]`  
+Base cases: `dp[0] = 1`, `dp[1] = 1`
+
+---
+
+#### 🔗 LeetCode Practice
+
+* [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
+* [198. House Robber](https://leetcode.com/problems/house-robber/)
+* [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+* [322. Coin Change](https://leetcode.com/problems/coin-change/)
+* [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
+* [1143. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
+* [72. Edit Distance](https://leetcode.com/problems/edit-distance/)
+
+---
