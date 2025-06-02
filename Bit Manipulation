@@ -1,0 +1,59 @@
+### 📘 16. Bit Manipulation
+
+#### 🧠 Concept
+
+**Bit Manipulation** involves using bitwise operators (`&`, `|`, `^`, `~`, `<<`, `>>`) to solve problems more efficiently, often in constant time.
+
+Bits represent the binary form of integers. Manipulating these bits can lead to elegant and highly optimized solutions.
+
+---
+
+#### 📌 When to Use
+
+Use this pattern when:
+- You’re working with **integers at the bit level**
+- You need **constant space/time optimizations**
+- Problems ask for **parity**, **power of two**, **unique elements**, **bit flipping**, etc.
+
+---
+
+#### ⚙️ Common Tricks
+
+- **Check if a number is even/odd**: `n & 1 == 0` (even), `n & 1 == 1` (odd)
+- **Check if a number is a power of two**: `n > 0 && (n & (n - 1)) == 0`
+- **Turn off the rightmost set bit**: `n & (n - 1)`
+- **Extract the rightmost set bit**: `n & -n`
+- **Count set bits**: Use Brian Kernighan’s algorithm:  
+  `while (n) { count++; n = n & (n - 1); }`
+- **Swap two numbers without temp variable**:  
+  `a = a ^ b; b = a ^ b; a = a ^ b;`
+
+---
+
+#### 💻 Example Problem
+
+**Problem:**  
+Given an array where every element appears twice except one, find that single one.
+
+**Input:**  
+`nums = [4, 1, 2, 1, 2]`
+
+**Output:**  
+`4`
+
+**Explanation:**  
+Using XOR (`^`), all duplicates cancel out:  
+`4 ^ 1 ^ 2 ^ 1 ^ 2 = 4`
+
+---
+
+#### 🔗 LeetCode Practice
+
+* [136. Single Number](https://leetcode.com/problems/single-number/)
+* [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)
+* [190. Reverse Bits](https://leetcode.com/problems/reverse-bits/)
+* [201. Bitwise AND of Numbers Range](https://leetcode.com/problems/bitwise-and-of-numbers-range/)
+* [231. Power of Two](https://leetcode.com/problems/power-of-two/)
+* [268. Missing Number](https://leetcode.com/problems/missing-number/)
+
+---
